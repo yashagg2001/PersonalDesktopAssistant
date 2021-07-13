@@ -14,23 +14,36 @@ Robo AI Voice assistant:"Good Morning Sir" (Greets the user according to time). 
 
 ### The implemented Voice assistant can perform the following tasks:
 
-1. can open a web page : Youtube , Google (using web browser)		
-2. Searching wikipedia (using wikipedia)    
-3. Predicts time (using datetime)	
-4. Playing a youtube video (using Pywhatkit)
-5. Searching anything on google (using Pywhatkit)
-6. Crack a joke (using pyjokes)
-7. can open a specific folder or downloaded music (using os)
-8. Sending Mail (using smtplib)
-9. Weather status (using openweather Map api)
-10. Fetching Latest News (open times of India Latest News Section)
-11. Can answer computational and geographical questions (using wolframalpha)
-12. Writing notes and showing notes (using python file handling)
-13. Can answer general questions (like will you be my life partner etc.)
-14. Can stop listening (by using bye, exit, quit etc. commands)
+	1.Can open a web page : Youtube , Google (using web browser)
+	
+	2.Searching wikipedia (using wikipedia)    
+	
+	3.Predicts time (using datetime)	
+	
+	4.Playing a youtube video (using Pywhatkit)
+	
+	5.Searching anything on google (using Pywhatkit)
+	
+	6.Crack a joke (using pyjokes)
+	
+	7.Can open a specific folder or downloaded music (using os)
+	
+	8.Sending Mail (using smtplib)
+	
+	9.Weather status (using openweather Map api)
+	
+	10.Fetching Latest News (open times of India Latest News Section)
+	
+	11.Can answer computational and geographical questions (using wolframalpha)
+	
+	12.Writing notes and showing notes (using python file handling)
+	
+	13.Can answer general questions (like will you be my life partner etc.)
+	
+	14.Can stop listening (by using bye, exit, quit etc. commands)
 
-if you ask any illogical question to Robo or if your voice is not clear then it will say:
-"Sorry, I couldn't understand. Try again"
+	if you ask any illogical question to Robo or if your voice is not clear then it will say:
+	"Sorry, I couldn't understand. Try again"
 
 ### Libraries required to be installed using Pip Command:
 	
