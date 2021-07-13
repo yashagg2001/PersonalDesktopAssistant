@@ -10,6 +10,8 @@ import smtplib
 import pywhatkit
 import requests
 import wolframalpha
+import pyjokes
+
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -109,6 +111,10 @@ if __name__ == "__main__":
             pywhatkit.search(f"{query}")
             print("Searching...")
             break
+
+        elif 'joke' in query:
+            speak(pyjokes.get_joke())
+            break
         
         elif 'open music' in query or 'start music' in query or 'play music' in query or 'gana sunao' in query:
             music_dir='C:\\Users\\yashg\\Desktop\\Music\\aankhon me teri'
@@ -169,7 +175,7 @@ if __name__ == "__main__":
             speak('Here are some headlines from the Times of India, Happy reading')
             break
 
-        elif 'ask' in query or 'question' in query:
+        elif 'ask' in query or 'question' in query or 'what\'s' in query or 'calculate' in query or 'whats' in query or 'what is' in query:
             speak('I can answer to computational and geographical questions and what question do you want to ask now ?')
             print('I can answer to computational and geographical questions and what question do you want to ask now ?')
             question=takeCommand()
@@ -179,13 +185,48 @@ if __name__ == "__main__":
             answer = next(res.results).text
             print(f'Answer to your question is {answer}')
             speak(f'Answer to your question is {answer}')
-            
+
+        elif "write a note" in query:
+            print("What should i write, sir")
+            speak("What should i write, sir")
+            note = takeCommand()
+            file = open('robo.txt', 'w')
+            print("Sir, Should i include date and time")
+            speak("Sir, Should i include date and time")
+            snfm = takeCommand()
+            if 'yes' in snfm or 'sure' in snfm:
+                strTime = datetime.datetime.now().strftime("%H:%M:%S")
+                file.write(strTime)
+                file.write(" :- ")
+                file.write(note)
+                file.close()
+            else:
+                file.write(note)
+                file.close()
+            speak('...note written successfully')
+
+        elif "show note" in query:
+            speak("Showing Notes")
+            file = open("robo.txt", "r")
+            a=file.read()
+            print(a)
+            speak(a)
+            break
 
         elif 'who are you' in query or 'what can you do' in query:
             speak('I am Robo, your personal assistant. I am programmed to minor tasks like'
                   'opening youtube,google,predict time,search wikipedia,predict weather' 
                   'In different cities, get top headline news from times of india and you can ask me computational or geographical questions too!')
             break
+
+        elif "will you be my" in query:  
+            speak("I'm not sure about, may be you should give me some time")
+ 
+        elif "how are you" in query:
+            speak("I'm fine, glad you me that")
+ 
+        elif "i love you" in query:
+            speak("It's hard to understand")
 
 
         elif "who made you" in query or "who created you" in query or "who discovered you" in query:
